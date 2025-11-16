@@ -1,0 +1,307 @@
+
+    <!DOCTYPE html>
+    <html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>فاکتورهای مشتریان</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+            
+            body {
+                font-family: 'Noto Naskh Arabic', sans-serif;
+                direction: rtl;
+                text-align: right;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .invoice-box {
+                width: 90%;
+                margin: 20px auto;
+                border: 1px solid #000;
+                padding: 10px;
+                box-sizing: border-box;
+                page-break-inside: avoid;
+            }
+            
+            .invoice-header {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .invoice-field {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            
+            @media print {
+                .invoice-box {
+                    margin: 10mm;
+                }
+                
+                .page-break {
+                    page-break-before: always;
+                }
+            }
+            
+            /* Group every 5 invoices per print page */
+            .invoice-group:nth-child(5n+1) {
+                page-break-before: always;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: علی رضایی</div>
+            <div class="invoice-field">شماره تماس: 09121234567</div>
+            <div class="invoice-field">آدرس محل سکونت: تهران، خیابان انقلاب، پلاک ۱۲</div>
+            <div class="invoice-field">کد پستی: ۱۲۳۴۵۶۷۸۹۰</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: مریم احمدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۵۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: اصفهان، میدان نقش جهان، کوچه گلستان، پلاک ۵</div>
+            <div class="invoice-field">کد پستی: ۸۷۶۵۴۳۲۱۰۹</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: حسین محمدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۳۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: شیراز، بلوار چمران، مجتمع باغ ارم، واحد ۳</div>
+            <div class="invoice-field">کد پستی: ۵۶۷۸۹۰۱۲۳۴</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: فاطمه کرمی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۱۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: مشهد، خیابان امام رضا، کوچه شهید هاشمی، پلاک ۸</div>
+            <div class="invoice-field">کد پستی: ۴۳۲۱۰۹۸۷۶۵</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: رضا علوی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۴۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: تبریز، خیابان ولیعصر، پلاک ۱۵</div>
+            <div class="invoice-field">کد پستی: ۹۸۷۶۵۴۳۲۱۰</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: سارا حسینی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۶۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: کرج، مهرشهر، بلوار شهرداری، واحد ۱۰</div>
+            <div class="invoice-field">کد پستی: ۳۲۱۰۹۸۷۶۵۴</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: محمد امینی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۵۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: اهواز، کیانپارس، خیابان پهلوان، پلاک ۲۰</div>
+            <div class="invoice-field">کد پستی: ۶۵۴۳۲۱۰۹۸۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: نازنین رضوانی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۲۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: قم، بلوار پیامبر اعظم، کوچه ۷، پلاک ۴</div>
+            <div class="invoice-field">کد پستی: ۱۰۹۸۷۶۵۴۳۲</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: امیر پورمحمدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۶۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: رشت، گلسار، خیابان ۹۰، واحد ۲</div>
+            <div class="invoice-field">کد پستی: ۷۶۵۴۳۲۱۰۹۸</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: زهرا صادقی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۷۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: کیش، میدان ساحل، برج مرجان، طبقه ۵</div>
+            <div class="invoice-field">کد پستی: ۸۹۰۱۲۳۴۵۶۷</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: بهروز نادری</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۸۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: یزد، میدان آزادی، کوچه سنتی، پلاک ۹</div>
+            <div class="invoice-field">کد پستی: ۴۵۶۷۸۹۰۱۲۳</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: لیلا جمشیدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۳۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: همدان، بلوار بعثت، مجتمع الوند، واحد ۴</div>
+            <div class="invoice-field">کد پستی: ۹۸۷۶۵۴۳۲۱۰</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: سعید کاظمی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۹۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: اراک، خیابان شهید بهشتی، پلاک ۱۸</div>
+            <div class="invoice-field">کد پستی: ۳۲۱۰۹۸۷۶۵۴</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: مینا طاهری</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۸۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: ساری، میدان ساعت، کوچه دریا، پلاک ۶</div>
+            <div class="invoice-field">کد پستی: ۶۵۴۳۲۱۰۹۸۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: پوریا موسوی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۴۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: بندرعباس، بلوار جمهوری، واحد ۷</div>
+            <div class="invoice-field">کد پستی: ۱۰۹۸۷۶۵۴۳۲</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: رویا قاسمی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۷۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: زنجان، خیابان سعدی، پلاک ۱۱</div>
+            <div class="invoice-field">کد پستی: ۷۶۵۴۳۲۱۰۹۸</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: کیانوش رحیمی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۹۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: اردبیل، میدان بسیج، کوچه کوهستان، واحد ۱</div>
+            <div class="invoice-field">کد پستی: ۸۹۰۱۲۳۴۵۶۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: شیما باقری</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۵۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: قزوین، بلوار مدرس، پلاک ۱۳</div>
+            <div class="invoice-field">کد پستی: ۴۵۶۷۸۹۰۱۲۳</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: فرهاد شریفی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۰۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: سنندج، خیابان فردوسی، مجتمع کردستان، واحد ۸</div>
+            <div class="invoice-field">کد پستی: ۹۸۷۶۵۴۳۲۱۰</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: آتوسا غفاری</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۰۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: کرمان، میدان آزادی، کوچه باغ، پلاک ۱۴</div>
+            <div class="invoice-field">کد پستی: ۳۲۱۰۹۸۷۶۵۴</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: میلاد فتحی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۶۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: ایلام، بلوار شهید سلیمانی، واحد ۹</div>
+            <div class="invoice-field">کد پستی: ۶۵۴۳۲۱۰۹۸۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: نیلوفر رضایی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۱۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: بوشهر، خیابان ساحلی، پلاک ۱۶</div>
+            <div class="invoice-field">کد پستی: ۱۰۹۸۷۶۵۴۳۲</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: بهنام محمودی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۱۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: گرگان، میدان وحدت، کوچه سبز، واحد ۲</div>
+            <div class="invoice-field">کد پستی: ۷۶۵۴۳۲۱۰۹۸</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: مهسا علیپور</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۷۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: شهرکرد، بلوار امام خمینی، پلاک ۱۷</div>
+            <div class="invoice-field">کد پستی: ۸۹۰۱۲۳۴۵۶۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: سیاوش حسنی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۲۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: بیرجند، خیابان مدرس، مجتمع خراسان، واحد ۵</div>
+            <div class="invoice-field">کد پستی: ۴۵۶۷۸۹۰۱۲۳</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: آرزو نجفی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۲۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: یاسوج، میدان انقلاب، کوچه کوه، پلاک ۱۹</div>
+            <div class="invoice-field">کد پستی: ۹۸۷۶۵۴۳۲۱۰</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: کامران صمدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۸۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: خرم آباد، بلوار ولایت، واحد ۶</div>
+            <div class="invoice-field">کد پستی: ۳۲۱۰۹۸۷۶۵۴</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: پریسا رضایی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۳۳۴۵۶۷۸۹</div>
+            <div class="invoice-field">آدرس محل سکونت: سمنان، خیابان امام، پلاک ۲۱</div>
+            <div class="invoice-field">کد پستی: ۶۵۴۳۲۱۰۹۸۷</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: هادی کریمی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۳۳۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: زاهدان، بلوار شهید مطهری، کوچه بلوچ، واحد ۳</div>
+            <div class="invoice-field">کد پستی: ۱۰۹۸۷۶۵۴۳۲</div>
+        </div>
+        
+        <div class="invoice-box ">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: رویا احمدی</div>
+            <div class="invoice-field">شماره تماس: ۰۹۲۹۱۲۳۴۵۶۷</div>
+            <div class="invoice-field">آدرس محل سکونت: ارومیه، میدان آذربایجان، پلاک ۲۲</div>
+            <div class="invoice-field">کد پستی: ۷۶۵۴۳۲۱۰۹۸</div>
+        </div>
+        
+        <div class="invoice-box invoice-group">
+            <div class="invoice-header">فاکتور مشتری</div>
+            <div class="invoice-field">نام و نام خانوادگی: بهروز نادری</div>
+            <div class="invoice-field">شماره تماس: ۰۹۱۸۲۳۴۵۶۷۸</div>
+            <div class="invoice-field">آدرس محل سکونت: یزد، میدان آزادی، کوچه سنتی، پلاک ۹</div>
+            <div class="invoice-field">کد پستی: ۴۵۶۷۸۹۰۱۲۳</div>
+        </div>
+        
+    </body>
+    </html>
+    
