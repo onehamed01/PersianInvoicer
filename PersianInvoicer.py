@@ -1,6 +1,5 @@
 import csv
-import datetime
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 
 
 class PersianInvoicerClass:
@@ -124,7 +123,7 @@ class PersianInvoicerClass:
             }}
             
             .invoice-field {{
-                font-size: 11px;
+                font-size: 16px;
                 margin-bottom: 4px;
                 line-height: 1.4;
             }}
