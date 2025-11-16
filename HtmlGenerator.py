@@ -6,10 +6,10 @@ def generate_invoices(customers, output_file='customer_labels.html'):
         <meta charset="UTF-8">
         <title>فاکتورهای مشتریان</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
             
             body {
-                font-family: 'Noto Naskh Arabic', sans-serif;
+                font-family: "Noto Sans Arabic", sans-serif;
                 direction: rtl;
                 text-align: right;
                 margin: 0;
@@ -77,7 +77,6 @@ def generate_invoices(customers, output_file='customer_labels.html'):
     </head>
     <body>
     '''
-    
     invoices_per_page = 8
     invoices_per_column = 4
     
@@ -117,8 +116,4 @@ def generate_invoices(customers, output_file='customer_labels.html'):
     except Exception as e:
         print(f"Error writing HTML: {e}")
 
-customers = read_customers_from_csv('database.csv')
-if customers:
-    generate_invoices(customers)
-else:
-    print("No customers found in database.csv")
+
