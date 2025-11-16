@@ -1,26 +1,3 @@
-import csv
-
-def read_customers_from_csv(filename='database.csv'):
-    customers = []
-    try:
-        with open(filename, 'r', encoding='utf-8') as csv_file:
-            csv_reader = csv.DictReader(csv_file)
-            for row in csv_reader:
-                if any(row.values()):
-                    customers.append((
-                        row.get('نام و نام خانوادگی', '').strip(),
-                        row.get('شماره تماس', '').strip(),
-                        row.get('آدرس محل سکونت', '').strip(),
-                        row.get('کد پستی', '').strip()
-                    ))
-    except FileNotFoundError:
-        print(f"Error: {filename} not found!")
-        return []
-    except Exception as e:
-        print(f"Error reading CSV: {e}")
-        return []
-    return customers
-
 def generate_invoices(customers, output_file='customer_labels.html'):
     html_content = '''
     <!DOCTYPE html>
@@ -101,19 +78,15 @@ def generate_invoices(customers, output_file='customer_labels.html'):
     <body>
     '''
     
-    # Group customers into pages of 8 (4 per column)
     invoices_per_page = 8
     invoices_per_column = 4
     
     for page_idx in range(0, len(customers), invoices_per_page):
-        # Start new page container
         html_content += '<div class="page-container">'
         
-        # Create two columns
         for col_idx in range(2):
             html_content += '<div class="column">'
             
-            # Add 4 invoice boxes to this column
             for box_idx in range(invoices_per_column):
                 customer_idx = page_idx + (col_idx * invoices_per_column) + box_idx
                 
@@ -137,7 +110,6 @@ def generate_invoices(customers, output_file='customer_labels.html'):
     </body>
     </html>
     '''
-    
     try:
         with open(output_file, 'w', encoding='utf-8') as html_file:
             html_file.write(html_content)
